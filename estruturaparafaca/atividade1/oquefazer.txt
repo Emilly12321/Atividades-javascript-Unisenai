@@ -1,0 +1,1 @@
+Desenvolva uma aplicação web que a partir de um número inteiro informado pelo usuário, gere uma tabuada deste número, com o respectivo resultado, até o 10 , exemplo , numero informado foi 2 = 2 x 1 = 2 / utilizar a estutura for()

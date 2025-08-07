@@ -1,0 +1,4 @@
+# Estrutura 'Se'
+
+# Desenvolver uma aplicação web que a partir de , notas de uma luno, informadas pelo usuário, calcule a sua média e de acordo com a mesma emita a situação do aluno:
+# "Aprovado", "Recuperação" ou "Reprovação".. lembrando q a média par a aprovação é a 7 ou mairo e entre 5 e 6,9 o aluno está em recuperação
