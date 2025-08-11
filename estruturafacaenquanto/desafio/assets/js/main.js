@@ -1,36 +1,38 @@
 function ValidaProc() {
 
     let turma = 1;
-    let alunos = 1;
-    let somatoria = 0;
+    let qtdealunos = 1;
+    let somaAlunos = 0;
     let somatoriaMedia = 0.0;
     let mediaMaiorSete = 0;
     do {
-        escola = parseInt(prompt("Favor informe a quantidade de alunos " + turma + " ° turma"));
+
+        alunosTurma = parseInt(prompt("Favor informe a quantidade de alunos da " + turma + " ° turma"));
 
         do {
 
-            media = parseFloat(prompt("Favor informe a média do " + alunos + "° aluno: "));
+            media = parseFloat(prompt("Favor informe a média do " + qtdealunos + "° aluno: "));
 
             if (media >= 7) {
                 mediaMaiorSete += 1
             }
 
-            alunos += 1
+            qtdealunos += 1
             somatoriaMedia += media;
             console.log("Total da média: " + somatoriaMedia);
 
-        } while (alunos <= escola)
+        } while (qtdealunos <= alunosTurma)
 
 
         console.log("A " + turma + "° possui " + mediaMaiorSete + " de alunos com média igual ou acima de 7");
         mediaMaiorSete = 0;
-        alunos = 1;
-        somatoria += escola;
+        qtdealunos = 1;
+        somaAlunos += alunosTurma;
         turma += 1;
 
     } while (turma <= 3)
-
-    console.log("A escola possui a média de " + somatoriaMedia / somatoria.toFixed(2));
+        
+    // let resposta = somatoriaMedia / somatoria 
+    console.log("A escola possui a média de " + (somatoriaMedia / somaAlunos).toFixed(2));
     return false;
 }

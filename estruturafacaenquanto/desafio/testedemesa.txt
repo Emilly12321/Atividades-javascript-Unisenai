@@ -1,21 +1,21 @@
-
-Uma escola tem 5 turmas e cada turma tem n alunos.
-Crie um programa que escreva, o total de alunos, por turma,
-com média superior ou igual a 7 e a média geral da escola.
+Escola com três turmas e de 20 alunos no geral.
 
 
-1 - 10 alunos / 4 >= 7 = 1 - 7 ; 2 - 8.5 ; 3 - 9 ; 4 - 10 = 
-2 - 15 alunos / 2 >= 7 = 1- 10 ; 2 - 7 = 
-3 - 10 alunos / 3 >= 7 = 1- 8.5 ; 2- 8 ; 3 - 9  
+1 - 5 alunos / 4 >= 7 === 7 ; 8.5 ;  9 ; 10 == 34,5 soma
+2 - 10 alunos / 2 >= 7 === 10 ; 7 == 17 soma
+3 - 5 alunos / 3 >= 7 ===  8.5 ; 8 ;  9  == 25,5 soma
 
-1- 2.5 / 3 / 5.5 / 6.5 / 5 / 4 = 26,5 media dos que são abaixo
+1°-  2.5   média dos que são abaixo
 
-2 - 2.5 / 3 / 5.5 / 6.5 / 5 / 4 / 1 / 2 / 3 / 4.5 / 5.2 / 6 / 3.2 / 4.3 = 55,7 media dos que são abaixo
-3 - 2.5 / 3 / 5.5 / 6.5 / 5 / 4 / 2 / 3 = 31,5 media dos que são abaixo
+2° -  2.5 ; 3 ; 5.5 ; 6.5 ; 5 ; 4 ; 1 ; 2 = 24,5 média dos que são abaixo
+
+3°-  2.5 ; 3 = 5,5 média dos que são abaixo
 
 
 soma de tudo
 
-26,5 + 34,5 = 61 primeira turma
-55,7 + 17 72,7 segunda turma
-31,5 + 25,5 =  57 terceira turma
+34,5 + 2,5 = 37 média --> 1° turma
+17 + 29,5 = 46,5 média --> 2° turma
+25,5 + 5,5 = 31 média da turma --> 3° turma
+
+114,5 / somaAlunos == 114,5 / 20 = 5,725 ou 5,72 
