@@ -8,6 +8,7 @@ function Validaproc() {
         number = parseInt(prompt("Digite um número: "));
 
         while (number < 0) {
+            console.log("Número é menor que zero: "+ number)
             number = parseInt(prompt("Digite o número novamente, porém desta vez positivo: "));
         }
         if(number % 5 == 0){
