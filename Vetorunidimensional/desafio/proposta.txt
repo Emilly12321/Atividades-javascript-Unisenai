@@ -1,0 +1,1 @@
+Faca um programa para gerar um vetor com 10 posições, onde cada elemento corresponde ao quadrado de sua posições. Imprima depois os dados no vetor.
