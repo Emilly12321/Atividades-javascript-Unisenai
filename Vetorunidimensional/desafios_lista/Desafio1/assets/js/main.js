@@ -4,8 +4,8 @@ function ValidaNota(){
 
     for(let i = 0 ; i< 5 ; i++){
         
-        nota1[i] = parseFloat(prompt((i+1)+"° Aluno\n Favor informe o valor a primeira nota: "));
-        nota2[i] = parseFloat(prompt((i+1)+"° Aluno\n Favor informe o valor a primeira nota: "));
+        nota1[i] = parseFloat(prompt((i+1)+"° Aluno\n Favor informe o valor da primeira nota: "));
+        nota2[i] = parseFloat(prompt((i+1)+"° Aluno\n Favor informe o valor da segunda nota: "));
        
     }
     
