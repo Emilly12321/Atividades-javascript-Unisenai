@@ -18,27 +18,29 @@ function SomarMatriz() {
 
     }
 
-    
+
 
     let opcao = parseInt(prompt("Favor informe a linha que você deseja verificar que você deseja multiplicar: "));
 
 
-    for (let i = 1; i <=linhas; i++) {
+    for (let i = 1; i <= linhas; i++) {
 
         resposta[i] = []
 
         if (i == opcao) {
 
-            for(let l = 1; l <=colunas ; l++){
+            for (let l = 1; l <= colunas; l++) {
 
-            resposta += matriz[i][l];
+                resposta += matriz[i][l];
 
-            
+
+            }
         }
+
     }
-    
-}
-    console.log("Soma da "+opcao+"° linha: "+ resposta);
+
+    document.write(resposta + "&nbsp&nbsp");
+
 
     return false;
 }
