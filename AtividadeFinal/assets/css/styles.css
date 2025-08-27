@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navi a,
+.navi ul,
+.navi li {
+
+    outline: none;
+    padding: 0;
+    /* tirar a linha/esboço que fica fora da borda */
+}
+
+a {
+    text-decoration: none;
+    padding: 0;
+
+}
+
+li {
+    list-style: none;
+}
+
+.navi {
+
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: center;
+    /* align-items: center; */
+    margin-top: 20px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /*mexendo na profundidade do conteúdo*/
+
+}
+
+
+.navi li a:where(not(div)) {
+
+    position: relative;
+    z-index: 0;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    
+
+}
+
+.navi .lista-title a{
+
+    padding: 20px;
+    font-size: 16px;
+}
+
+/*Mega menu - configurando */
+
+.navi .sub-itens li {
+
+    /* position: absolute; */
+    width: 100%;
+    padding: 5px 0;
+    /* top: 50px; */
+    left: 0;
+
+    /*escondendo o menu*/
+    visibility: hidden;
+    /* que as divs fiquem escodindas e só apareçam após o hover */
+}
+
+
+
+/* Ao passar o mouse as categorias são mostradas. */
+.navi li:hover {
+    div{
+        visibility: visible;
+    }
+
+}
