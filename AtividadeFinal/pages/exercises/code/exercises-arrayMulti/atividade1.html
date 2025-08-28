@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        section {
+            margin-top: 0px auto;
+
+        }
+
+        .form {
+
+            width: 300px;
+            margin: 0px auto;
+            font-weight: bold;
+            margin-bottom: 10px;
+
+
+        }
+
+        .form input {
+
+            margin: 5px auto;
+            width: 100%;
+            padding: 5px 0;
+
+        }
+
+        .form button {
+
+            width: 30%;
+            margin: 0 9%;
+            background-color: #b1ccf5;
+            font-weight: bold;
+            font-size: 16px;
+
+        }
+
+
+        label {
+            float: left;
+        }
+
+        h2 {
+
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-size: 50px;
+
+        }
+    </style>
+    <title>Atividade 1 - Matrizes </title>
+</head>
+
+<body>
+
+    <section>
+        <h2>Atividade 1 - Uso Matriz (3X3) multiplicando</h2>
+
+        <form action="#" method="get" onsubmit="return MultiplicaMatriz()">
+
+            <fieldset class="form">
+
+                <legend>Demonstrar dados</legend>
+                <button type="submit">Enviar</button>
+
+            </fieldset>
+
+
+        </form>
+
+
+    </section>
+
+
+    <script>
+
+
+        function MultiplicaMatriz() {
+
+            let matriz = [];
+            let resposta = [];
+            let linhas = 3;
+            let colunas = 3;
+
+            // Alimentar a matriz
+
+            for (let i = 1; i <= linhas; i++) {
+
+                matriz[i] = []
+                for (let c = 0; c < colunas; c++) {
+
+                    matriz[i][c] = i;
+
+                }
+
+            }
+
+            // Matriz[ 1 1 1 ; 2 2 2 ; 3 3 3 ]
+
+            let opcao = parseInt(prompt("Favor informe o valor que você deseja multiplicar: "));
+
+            for (let i = 1; i <= linhas; i++) {
+
+                resposta[i] = []
+                for (let c = 0; c < colunas; c++) {
+
+                    resposta[i][c] = matriz[i][c] * opcao;
+                    document.write(resposta[i][c] + "&nbsp&nbsp")
+                }
+
+                document.write("<br>")
+            }
+            // resposta [2 2 2 ; 4 4 4 ; 6 6 6 ];
+
+            return false;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/valida.js"></script>
+    <style>
+        /* Configurações gerais */
+
+        section {
+
+            margin-top: 0px auto;
+
+        }
+
+
+        /* Configurações do formulário */
+
+        .cadbasico {
+
+            width: 300px;
+            margin: 0px auto;
+            font-weight: bold;
+            margin-bottom: 10px;
+
+        }
+
+        .cadbasico input {
+            margin: 5px auto;
+            width: 100%;
+            padding: 5px 0;
+        }
+
+        .cadbasico button {
+            width: 30%;
+            margin: 0 10%;
+            background-color: #b1ccf5;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        label {
+            float: left;
+
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-size: 50px;
+        }
+    </style>
+
+    <title>Estrutura SE JavaScript</title>
+
+</head>
+
+<body>
+    <section>
+        <h2>Validação de campos de formulário(Estrutura SE(if()))</h2>
+        <font face="arial">
+            <form name="frmcadastro" action="#" method="get" onsubmit="return validaFormulario()">
+
+                <fieldset class="cadbasico">
+
+                    <legend>Dados pessoais</legend>
+
+                    <br>
+
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="txtnome" id="nome">
+                    <br><br>
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" name="txtfone" id="telefone">
+                    <br><br>
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="txtemail" id="email">
+                    <br><br>
+                    <button type="reset">Cancelar</button><button type="submit">Confirmar</button>
+
+                </fieldset>
+
+            </form>
+        </font>
+    </section>
+
+    <script>
+
+
+        function validaFormulario() {
+
+            if (document.frmcadastro.txtnome.value == "") {
+
+                alert("Preencha o campo Nome");
+                document.frmcadastro.txtnome.focus();
+                return false;
+
+            } else if (document.frmcadastro.txtfone.value == "") {
+
+                alert("Favor preencha o campo Telefone");
+                document.frmcadastro.txtfone.focus();
+                return false;
+
+            } else if (document.frmcadastro.txtemail.value == "") {
+
+                alert("Favor preencha o campo E-mail.");
+                document.frmcadastro.txtemail.focus();
+                return false;
+
+            } else {
+
+                alert("Todos os campos foram preenchidos");
+                return true;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Configurações gerais */
+
+        section {
+            margin-top: 0px auto;
+
+        }
+
+        /* Configurando da página  */
+
+        .cadnumint {
+
+            width: 300px;
+            margin: 0px auto;
+            font-weight: bold;
+            margin-bottom: 10px;
+
+        }
+
+        .cadnumint input {
+
+            margin: 5px auto;
+            width: 100%;
+            padding: 5px 0;
+
+        }
+
+        .cadnumint button {
+
+            width: 30%;
+            margin: 0 9%;
+            background-color: #b1ccf5;
+            font-weight: bold;
+            font-size: 16px;
+
+        }
+
+
+        label {
+            float: left;
+        }
+
+        h2 {
+
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-size: 50px;
+
+        }
+    </style>
+
+    <title>Somando números - While</title>
+</head>
+
+<body>
+    <section>
+
+        <h2></h2>
+        <form action="#" method="get" onsubmit="return Validaproc()">
+            <fieldset class="cadnumint">
+
+                <legend>Entrada de dados</legend>
+                <button type="submit">Enviar</button>
+
+            </fieldset>
+
+
+
+
+        </form>
+
+
+
+    </section>
+
+
+
+    <script>
+        function Validaproc() {
+
+            let i = 1;
+            let acumula = 0;
+
+            while (i <= 3) {
+                number = parseInt(prompt("Digite um número: "));
+                i++
+                acumula += number
+            }
+            console.log("A soma dos números digitado é : ", acumula);
+
+            return false;
+
+
+        }
+    </script>
+</body>
+
+</html>

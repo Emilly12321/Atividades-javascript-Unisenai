@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Configurações gerais */
+
+        section {
+            margin-top: 0px auto;
+
+        }
+
+        /* Configurando da página  */
+
+        .cadnumint {
+
+            width: 300px;
+            margin: 0px auto;
+            font-weight: bold;
+            margin-bottom: 10px;
+
+        }
+
+        .cadnumint input {
+
+            margin: 5px auto;
+            width: 100%;
+            padding: 5px 0;
+
+        }
+
+        .cadnumint button {
+
+            width: 30%;
+            margin: 0 9%;
+            background-color: #b1ccf5;
+            font-weight: bold;
+            font-size: 16px;
+
+        }
+
+
+        label {
+            float: left;
+        }
+
+        h2 {
+
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-size: 50px;
+
+        }
+    </style>
+
+    <title>Exemplo - Enquanto</title>
+
+</head>
+
+<body>
+    <section>
+
+        <h2>Exemplo - Exibe_inteiros de 1 a 10</h2>
+        <font face="arial">
+
+            <form action="#" method="get" onsubmit="return Validaproc()">
+
+                <fieldset class="cadnumint">
+
+                    <legend>Entrada de dados</legend>
+                    <button type="submit">Enviar</button>
+
+
+                </fieldset>
+
+
+
+            </form>
+
+
+        </font>
+
+
+    </section>
+
+    <script>
+
+
+        function Validaproc() {
+
+            let i = 1;
+
+            while (i <= 10) {
+
+                console.log("Passando na estrutura a " + i + "° vez o valor  de  i é : " + i);
+                i++;
+
+            }
+            return false;
+
+        }
+
+
+    </script>
+</body>
+
+</html>

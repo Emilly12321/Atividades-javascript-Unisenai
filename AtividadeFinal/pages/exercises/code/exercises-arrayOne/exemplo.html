@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        section {
+            margin-top: 0px auto;
+
+        }
+
+        .form {
+
+            width: 300px;
+            margin: 0px auto;
+            font-weight: bold;
+            margin-bottom: 10px;
+
+
+        }
+
+        .form input {
+
+            margin: 5px auto;
+            width: 100%;
+            padding: 5px 0;
+
+        }
+
+        .form button {
+
+            width: 30%;
+            margin: 0 9%;
+            background-color: #b1ccf5;
+            font-weight: bold;
+            font-size: 16px;
+
+        }
+
+
+        label {
+            float: left;
+        }
+
+        h2 {
+
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-size: 50px;
+
+        }
+    </style>
+
+    <title>Armazenar 3 números inteiros</title>
+</head>
+
+<body>
+
+    <section>
+
+        <form action="#" method="get" onsubmit="return ValidaProc()">
+
+            <fieldset class="form">
+
+                <legend>Entrada de dados</legend>
+                <button type="submit">Enviar</button>
+
+            </fieldset>
+
+
+        </form>
+
+
+    </section>
+
+    <script>
+
+        function ValidaProc() {
+
+            //Declarando a variável controladora i
+            let i;
+
+            //Declarando o vetor
+
+            let num = [];
+
+
+            //Alimentando o vetor com dados
+
+            for (i = 0; i < 3; i++) {
+
+                num[i] = parseInt(prompt("Digite um número: "));
+                console.log(num[i] + " este valor está sendo armazenado na posição " + i + " do vetor.")
+
+            }
+
+            //Retirando os valores de cada posição do vetor...
+
+            for (i = 0; i < 3; i++) {
+
+                console.log("O valor do vetor num na posição " + i + " é : " + num[i]);
+            }
+            return false;
+
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>
