@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/css/estilo.css">
+    <link rel="stylesheet" href="../../../assets/css/estilo.css">
     <title>EXEMPLO</title>
 </head>
 
@@ -18,12 +18,12 @@
 
 
                 <li>
-                    <a href="../../indextest.html" class="titulo-sobre">HOME</a>
+                    <a href="../../../index.html" class="titulo-sobre">HOME</a>
                 </li>
 
                 <li>
 
-                    <a href="#" class="titulo-sobre">CONDICIONAL STRUCTURE</a>
+                    <a>ESTRUTURA CONDICIONAL</a>
 
                     <div>
 
@@ -31,13 +31,13 @@
 
                             <li>
 
-                                <a href="../IF-page.html">IF STRUCTURE</a>
+                                <a href="../../IF-page.html">IF ESTRUTURA</a>
 
                             </li>
 
                             <li>
 
-                                <a href="#">SWITCH...CASE STRUCTURE</a>
+                                <a href="../../switch_case.html">SWITCH...CASE ESTRUTURA</a>
 
                             </li>
 
@@ -51,7 +51,7 @@
 
                 <li>
 
-                    <a href="#" class="titulo-sobre">REPETITION STRUCTURE</a>
+                    <a>ESTRUTURA DE REPETIÇÃO</a>
 
                     <div>
 
@@ -59,18 +59,18 @@
 
                             <li>
 
-                                <a href="#">FOR STRUCTURE</a>
+                                <a href="../../for.html">FOR ESTRUTURA</a>
 
                             </li>
 
                             <li>
 
-                                <a href="#">WHILE STRUCTURE</a>
+                                <a href="../../while.html">WHILE ESTRUTURA</a>
 
                             </li>
                             <li>
 
-                                <a href="#">DO...WHILE STRUCTURE</a>
+                                <a href="../../dowhile.html">DO...WHILE ESTRUTURA</a>
 
                             </li>
 
@@ -83,7 +83,7 @@
 
                 <li>
 
-                    <a href="#" class="titulo-sobre">ARRAY</a>
+                    <a>ARRAY</a>
 
                     <div>
 
@@ -91,13 +91,13 @@
 
                             <li>
 
-                                <a href="#">ONE-DIMENSIONAL</a>
+                                <a href="../../arrayOne.html">UNI-DIMENSIONAL</a>
 
                             </li>
 
                             <li>
 
-                                <a href="#">MULTI-DIMENSIONAL</a>
+                                <a href="../../arrayMulti.html">MULTI-DIMENSIONAL</a>
 
                             </li>
 
@@ -119,7 +119,6 @@
         </nav>
 
 
-
         <div class="conteudo">
 
             <div class="container">
@@ -133,62 +132,138 @@
 
 
 
-                    <textarea name="txtcode" id="codeEx" class="codigo-area" readonly>
+                    <div class="codigo-area">
+                        <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;script src="js/valida.js"&gt;&lt;/script&gt;
+    &lt;style&gt;
+        /* Configurações gerais */
+
+        section {
+
+            margin-top: 0px auto;
+
+        }
 
 
-                                <!DOCTYPE html>
-                                <html lang="pt-br">
-                                    
-                                    <head>
-                                        <meta charset="UTF-8">
-                                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                        <link rel="stylesheet" type="text/css" href="css/config.css">
-                                        <script src="js/valida.js"></script>
-                                        <title>Estrutura SE JavaScript</title>
-                                        
-                                    </head>
-                                    
-                                    <body>
-                                        <section>
-                                            <h2>Validação de campos de formulário(Estrutura SE(if()))</h2>
-                                            <font face="arial">
-                                                <form name="frmcadastro" action="#" method="get" onsubmit="return validaFormulario()">
-                                                    
-                                                    <fieldset class="cadbasico">
-                                                        
-                                                        <legend>Dados pessoais</legend>
-                                                        
-                                                        <br>
-                                                        
-                                                        <label for="nome">Nome:</label>
-                                                        <input type="text" name="txtnome" id="nome">
-                                                        <br><br>
-                                                        <label for="telefone">Telefone:</label>
-                                                        <input type="text" name="txtfone" id="telefone">
-                                                        <br><br>
-                                                        <label for="email">E-mail:</label>
-                                                        <input type="email" name="txtemail" id="email">
-                                                        <br><br>
-                                                        <button type="reset">Cancelar</button><button type="submit">Confirmar</button>
-                                                        
-                                                    </fieldset>
-                                                    
-                                                </form>
-                                            </font>
-                                        </section>
-                                    </body> 
-                                    </html>
-                                    
-                                
-                                    
-                                    
-                                    
-                                    
-                                </textarea>
+        /* Configurações do formulário */
+
+        .cadbasico {
+
+            width: 300px;
+            margin: 0px auto;
+            font-weight: bold;
+            margin-bottom: 10px;
+
+        }
+
+        .cadbasico input {
+            margin: 5px auto;
+            width: 100%;
+            padding: 5px 0;
+        }
+
+        .cadbasico button {
+            width: 30%;
+            margin: 0 10%;
+            background-color: #b1ccf5;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        label {
+            float: left;
+
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-size: 50px;
+        }
+    &lt;/style&gt;
+
+    &lt;title&gt;Estrutura SE JavaScript&lt;/title&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;section&gt;
+        &lt;h2&gt;Validação de campos de formulário(Estrutura SE(if()))&lt;/h2&gt;
+        &lt;font face="arial"&gt;
+            &lt;form name="frmcadastro" action="#" method="get" onsubmit="return validaFormulario()"&gt;
+
+                &lt;fieldset class="cadbasico"&gt;
+
+                    &lt;legend&gt;Dados pessoais&lt;/legend&gt;
+
+                    &lt;br&gt;
+
+                    &lt;label for="nome"&gt;Nome:&lt;/label&gt;
+                    &lt;input type="text" name="txtnome" id="nome"&gt;
+                    &lt;br&gt;&lt;br&gt;
+                    &lt;label for="telefone"&gt;Telefone:&lt;/label&gt;
+                    &lt;input type="text" name="txtfone" id="telefone"&gt;
+                    &lt;br&gt;&lt;br&gt;
+                    &lt;label for="email"&gt;E-mail:&lt;/label&gt;
+                    &lt;input type="email" name="txtemail" id="email"&gt;
+                    &lt;br&gt;&lt;br&gt;
+                    &lt;button type="reset"&gt;Cancelar&lt;/button&gt;&lt;button type="submit"&gt;Confirmar&lt;/button&gt;
+
+                &lt;/fieldset&gt;
+
+            &lt;/form&gt;
+        &lt;/font&gt;
+    &lt;/section&gt;
+
+    &lt;script&gt;
+
+
+        function validaFormulario() {
+
+            if (document.frmcadastro.txtnome.value == "") {
+
+                alert("Preencha o campo Nome");
+                document.frmcadastro.txtnome.focus();
+                return false;
+
+            } else if (document.frmcadastro.txtfone.value == "") {
+
+                alert("Favor preencha o campo Telefone");
+                document.frmcadastro.txtfone.focus();
+                return false;
+
+            } else if (document.frmcadastro.txtemail.value == "") {
+
+                alert("Favor preencha o campo E-mail.");
+                document.frmcadastro.txtemail.focus();
+                return false;
+
+            } else {
+
+                alert("Todos os campos foram preenchidos");
+                return true;
+            }
+        }
+
+    &lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+
+                    </div>
 
                     <div class="container_bnt">
 
-                        <button onclick="carregar('code/exercises-if/exemplo.html')" id="carregarCodigo">
+                        <button onclick="carregar('../code/exercises_if/exemplo.html')" id="carregarCodigo">
 
                             Executar
 
@@ -217,7 +292,7 @@
 
     </section>
 
-    <script src="../../assets/js/main.js"></script>
+    <script src="../../../assets/js/main.js"></script>
 
 </body>
 

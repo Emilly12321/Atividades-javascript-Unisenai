@@ -128,7 +128,7 @@
                 <div class="container-codigo">
 
 
-                    <h2>CÓDIGO</h2>
+                    <h2>CODE</h2>
 
 
 
@@ -140,7 +140,7 @@
 
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Estrutura SE JS&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
     &lt;style&gt;
         /* Configurações gerais */
 
@@ -151,7 +151,7 @@
 
         /* Configurando da página  */
 
-        .cadmedialuno1 {
+        .cadnumint {
 
             width: 300px;
             margin: 0px auto;
@@ -160,7 +160,7 @@
 
         }
 
-        .cadmedialuno1 input {
+        .cadnumint input {
 
             margin: 5px auto;
             width: 100%;
@@ -168,15 +168,16 @@
 
         }
 
-        .cadmedialuno1 button {
+        .cadnumint button {
 
             width: 30%;
-            margin: 0 10%;
+            margin: 0 9%;
             background-color: #b1ccf5;
             font-weight: bold;
             font-size: 16px;
 
         }
+
 
         label {
             float: left;
@@ -191,112 +192,65 @@
 
         }
     &lt;/style&gt;
-
-
-    &lt;script src="js/valproc.js"&gt;&lt;/script&gt;
-
+    &lt;title&gt;Atividade 3 - Números positivos&lt;/title&gt;
 &lt;/head&gt;
 
 &lt;body&gt;
     &lt;section&gt;
-        &lt;h2&gt;Atividade - Cálculo média de alunos - Estrutura condicional "se"(if) &lt;/h2&gt;
-        &lt;font face="arial"&gt;
 
-            &lt;form name="frmnotas" action="#" method="get" onsubmit="return procFormulario()"&gt;
+        &lt;h2&gt;Atividade 3 - Números positivos e divisiveis por 5&lt;/h2&gt;
+        &lt;form action="#" method="get" onsubmit="return Validaproc()"&gt;
+            &lt;fieldset class="cadnumint"&gt;
 
-                &lt;fieldset class="cadmedialuno1"&gt;
+                &lt;legend&gt;Entrada de dados&lt;/legend&gt;
+                &lt;button type="submit"&gt;Enviar&lt;/button&gt;
 
-                    &lt;legend&gt;Entrada de dados&lt;/legend&gt;
-                    &lt;br&gt;
-                    &lt;label for="num1"&gt;Nota 1: &lt;/label&gt;
-                    &lt;input type="text" name="txtnum1" id="num1"&gt;
-                    &lt;br&gt;&lt;br&gt;
-                    &lt;label for="num2"&gt;Nota 2: &lt;/label&gt;
-                    &lt;input type="text" name="txtnum2" id="num2"&gt;
-                    &lt;br&gt;&lt;br&gt;
-                    &lt;label for="num3"&gt;Nota 3: &lt;/label&gt;
-                    &lt;input type="text" name="txtnum3" id="num3"&gt;
-                    &lt;br&gt;&lt;br&gt;
-                    &lt;button type="reset"&gt;Limpar&lt;/button&gt;&lt;button type="submit"&gt;confirmar&lt;/button&gt;
+            &lt;/fieldset&gt;
 
-                &lt;/fieldset&gt;
+        &lt;/form&gt;
 
-            &lt;/form&gt;
-
-        &lt;/font&gt;
     &lt;/section&gt;
 
     &lt;script&gt;
 
+        function Validaproc() {
 
+            let i = 1;
+            let contador = 0;
+            let somatorio = 0;
 
+            while (i &lt;= 3) {
+                number = parseInt(prompt("Digite um número: "));
 
-        function procFormulario() {
-
-
-
-            // Validação de campos (Se documento html no frmnotas (formulario), o campo estiver com valor vazio)
-            if (document.frmnotas.txtnum1.value == "") {
-
-                alert("Preencha o campo Nota 1");
-                document.frmnotas.txtnum1.focus();
-                return false;
-
-            }
-            else if (document.frmnotas.txtnum2.value == "") {
-
-                alert("Preencha o campo Nota 2");
-                document.frmnotas.txtnum2.focus();
-                return false;
-
-            }
-            else if (document.frmnotas.txtnum3.value == "") {
-
-                alert("Preencha o campo Nota 3");
-                document.frmnotas.txtnum3.focus();
-                return false;
-
-            }
-            else {
-
-                // Processamento do programa...
-                // declarando a váriavel e convertendo (persefloat) para real, onde puxa no documento html pelo ID o seu valor  
-                let nota1 = parseFloat(document.getElementById('num1').value);
-                let nota2 = parseFloat(document.getElementById('num2').value);
-                let nota3 = parseFloat(document.getElementById('num3').value);
-                let media = (nota1 + nota2 + nota3) / 3;
-
-                if (media &gt;= 7) {
-                    alert("Sua média foi " + media.toFixed(2) + "\nVocê foi aprovado, parabéns!!! ")
+                while (number &lt; 0) {
+                    console.log("Número é menor que zero: " + number)
+                    number = parseInt(prompt("Digite o número novamente, porém desta vez positivo: "));
                 }
-                else if (media &gt;= 5 &amp;&amp; media &lt;= 6.9) {
-
-                    alert("Sua média foi " + media.toFixed(2) + "\nVocê está em recuperação, cuidado!!")
-                }
-                else {
-
-                    alert("Sua média foi " + media.toFixed(2) + "\nVocê está reprovado...")
+                if (number % 5 == 0) {
+                    somatorio += number;
+                    contador++;
 
                 }
-
-
+                i++;
             }
+            console.log("A soma dos números digitado que são divisiveis por 5 é : " + somatorio);
+            console.log("A quantidade de números divisiveis por 5 são : " + contador);
+
+            return false;
 
         }
-
-
     &lt;/script&gt;
-
 &lt;/body&gt;
 
 &lt;/html&gt;
 </code></pre>
 
+
                     </div>
 
                     <div class="container_bnt">
 
-                        <button onclick="carregar('../code/exercises_if/atividade1.html')" id="carregarCodigo">
+                        <button onclick="carregar('../code/exercises-switch/atividade1.html')" id="carregarCodigo">
 
                             Executar
 
